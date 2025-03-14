@@ -1,0 +1,605 @@
+% MY MACROS
+% Universalized: 12/13/2024
+% test macro to make sure everything is in sync
+
+\newcommand{\testmacro}{\text{macros.tex v. 2025-01-02 6pm}}
+% MY EMAIL
+\newcommand{\myemail}{loren.matilsky@gmail.com}
+
+% scientific notation
+\newcommand{\sn}[2]{#1\times10^{#2}}
+\newcommand{\sncomp}[2]{{#1}e{#2}}
+
+% COMMON SUBSCRIPTS
+\newcommand{\cz}{_{\rm{CZ}}}
+\newcommand{\rz}{_{\rm{RZ}}}
+\newcommand{\fulll}{_{\rm{full}}}
+\newcommand{\dimm}{_{\rm{dim}}}
+\newcommand{\rad}{_{\rm{r}}}
+\newcommand{\nrad}{_{\rm{nr}}}
+
+% MATH OPERATORS
+\newcommand{\pderiv}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\matderiv}[1]{\frac{D#1}{Dt}}
+\newcommand{\pderivline}[2]{\partial#1/\partial#2}
+\newcommand{\parenfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\brackfrac}[2]{\left[\frac{#1}{#2}\right]}
+\newcommand{\bracefrac}[2]{\left\{\frac{#1}{#2}\right\}}
+
+% averages
+\newcommand{\av}[1]{\left\langle#1\right\rangle}
+\newcommand{\avsph}[1]{\left\langle#1\right\rangle_{\rm{sph}}}
+\newcommand{\avspht}[1]{\left\langle#1\right\rangle_{ {\rm sph}, t}}
+\newcommand{\avt}[1]{\left\langle#1\right\rangle_{t}}
+\newcommand{\avtpar}[1]{\left(#1\right)_{t}}
+\newcommand{\avphi}[1]{\left\langle#1\right\rangle_{\phi}}
+\newcommand{\avphit}[1]{\left\langle#1\right\rangle_{\phi,t}}
+\newcommand{\avvol}[1]{\left\langle#1\right\rangle_{\rm{v}}}
+
+\newcommand{\avcz}[1]{\left\langle#1\right\rangle\cz}
+\newcommand{\avrz}[1]{\left\langle#1\right\rangle\rz}
+\newcommand{\avfull}[1]{\left\langle#1\right\rangle\fulll}
+\newcommand{\avczt}[1]{\left\langle#1\right\rangle_{{\rm CZ}, t}}
+\newcommand{\avrzt}[1]{\left\langle#1\right\rangle{{\rm RZ}, t}}
+\newcommand{\avfullt}[1]{\left\langle#1\right\rangle{{\rm full}, t}}
+
+% alternative average notation
+\newcommand{\avalt}[1]{\langle#1\rangle}
+\newcommand{\avaltsph}{\overline}
+\newcommand{\avaltspht}[1]{\left(\overline{#1}\right)_{t}}
+
+\newcommand{\dbprime}{^{\prime\prime}}
+
+\newcommand{\define}{\coloneqq}
+\newcommand{\definealt}{\equiv}
+%\newcommand{\define}{\equiv}
+
+
+% TEXT OPERATORS
+\newcommand{\five}{\ \ \ \ \ }
+\newcommand{\orr}{\text{or}\five }
+\newcommand{\andd}{\text{and}\five }
+\newcommand{\where}{\text{where}\five }
+\newcommand{\with}{\text{with}\five }
+
+% VECTOR SHORCUTS
+
+% operators
+\newcommand{\curl}{\nabla\times}
+\newcommand{\Div}{\nabla\cdot}
+\newcommand{\lap}{\nabla^2}
+\newcommand{\dotgrad}{\cdot\nabla}
+\newcommand{\ugrad}{\bm{u}\dotgrad}
+
+% unit vectors
+\newcommand{\e}{\hat{\bm{e}}}
+\newcommand{\erad}{\e_r}
+\newcommand{\etheta}{\e_\theta}
+\newcommand{\ephi}{\e_\phi}
+\newcommand{\elambda}{\e_\lambda}
+\newcommand{\ez}{\e_z}
+\newcommand{\exi}{\e_\xi}
+\newcommand{\eeta}{\e_\eta}
+\newcommand{\epol}{\e_{\rm{pol}}}
+\newcommand{\emer}{\e_{\rm{mer}}}
+
+
+% FLUX ALIASES
+\newcommand{\flux}{{\bm{F}}}
+
+\newcommand{\fluxrad}{\flux_{\rm{r}}}
+\newcommand{\fluxnrad}{\flux_{\rm{nr}}}
+\newcommand{\fluxcond}{\flux_{\rm{c}}}
+\newcommand{\fluxenth}{\flux_{\rm{e}}}
+
+\newcommand{\fluxscalarrad}{F_{\rm{r}}}
+\newcommand{\fluxscalarnrad}{F_{\rm{nr}}}
+\newcommand{\fluxscalarcond}{F_{\rm{c}}}
+\newcommand{\fluxscalarenth}{F_{\rm{e}}}
+
+% differential rotation stuff
+\newcommand{\omzero}{\Omega_0}
+\newcommand{\twoomzero}{2\Omega_0}
+\newcommand{\omzerovec}{\bm{\Omega}_0}
+\newcommand{\omsun}{\Omega_\odot}
+\newcommand{\domega}{\Delta\Omega}
+\newcommand{\domsixty}{\domega_{\rm 60}}
+
+% REFERENCE STATE AND THERMO. VARIABLES
+
+% may want to append this
+\newcommand{\ofr}{(r)}
+\newcommand{\rprime}{{r^{\prime}}}
+\newcommand{\ofrprime}{(\rprime)}
+
+% reference-state constants
+\newcommand{\cv}{c_{\rm{v}}}
+\newcommand{\cp}{c_{\rm{p}}}
+\newcommand{\cvcap}{C_{\rm{v}}}
+\newcommand{\cpcap}{C_{\rm{p}}}
+\newcommand{\cs}{c_{\rm s}}
+\newcommand{\gasconst}{\mathcal{R}}
+\newcommand{\gammaone}{\Gamma_1}
+
+% total thermal variables (may wish to switch this stuff around later--I've always hated this notation of "no subscripts" = perturbation
+\newcommand{\tot}{_{\rm{tot}}}
+\newcommand{\rhotot}{\rho\tot}
+\newcommand{\tmptot}{T\tot}
+\newcommand{\prstot}{P\tot}
+\newcommand{\stot}{S\tot}
+\newcommand{\dsdrtot}{\frac{dS\tot}{dr}}
+\newcommand{\dsdrtotline}{dS\tot/dr}
+
+% mean state
+\newcommand{\rhoover}{\overline{\rho}}
+\newcommand{\tmpover}{\overline{T}}
+\newcommand{\prsover}{\overline{P}}
+\newcommand{\entrover}{\overline{s}}
+\newcommand{\inteover}{\overline{u}}
+\newcommand{\enthover}{\overline{h}}
+\newcommand{\heatover}{\overline{Q}}
+\newcommand{\heatradover}{\overline{Q}_{\rm r}}
+\newcommand{\coolover}{\overline{C}}
+\newcommand{\nsqover}{\overline{N^2}}
+\newcommand{\gover}{\overline{g}}
+\newcommand{\nuover}{\overline{\nu}}
+\newcommand{\kappaover}{\overline{\kappa}}
+\newcommand{\etaover}{\overline{\eta}}
+\newcommand{\muover}{\overline{\mu}}
+\newcommand{\deltaover}{\overline{\delta}}
+\newcommand{\cpover}{\overline{\cpcap}}
+\newcommand{\cvover}{\overline{\cvcap}}
+\newcommand{\cssqover}{\overline{\cs^2}}
+\newcommand{\Dentrover}{\Delta\entrover}
+\newcommand{\Dentroverf}{\Delta\entrover_{\rm f}}
+
+\newcommand{\fluxradover}{\overline{\flux}_{\rm{r}}}
+\newcommand{\fluxscalarradover}{\overline{F}_{\rm{r}}}
+\newcommand{\fluxnradover}{\overline{\flux}_{\rm{nr}}}
+\newcommand{\fluxscalarnradover}{\overline{F}_{\rm{nr}}}
+\newcommand{\kradover}{\overline{\kappa}_{\rm rad}}
+
+% ``typical" values of mean state (a subscript)
+% mean state
+\newcommand{\rhoa}{\rho_a}
+\newcommand{\tmpa}{T_a}
+\newcommand{\prsa}{p_a}
+\newcommand{\entra}{s_a}
+\newcommand{\intea}{u_a}
+\newcommand{\entha}{h_a}
+\newcommand{\heata}{Q_a}
+\newcommand{\heatrada}{\overline{Q}_{{\rm r}a}}
+\newcommand{\coola}{C_a}
+\newcommand{\nsqa}{N^2_a}
+\newcommand{\grava}{g_a}
+\newcommand{\nua}{\nu_a}
+\newcommand{\kappaa}{\kappa_a}
+\newcommand{\etaa}{\eta_a}
+\newcommand{\mua}{\mu_a}
+\newcommand{\deltaa}{\delta_a}
+\newcommand{\cpa}{(\cpcap)_a}
+\newcommand{\cva}{(\cvcap)_a}
+\newcommand{\cssqa}{(\cs^2)_a}
+\newcommand{\fluxrada}{F_{{\rm r}a}}
+\newcommand{\fluxnrada}{F_{{\rm{nr}}a}}
+\newcommand{\krada}{\kappa_{{\rm rad}a}}
+\newcommand{\sigmaa}{\sigma_a}
+
+% mean--state derivatives
+\newcommand{\dlnrhoover}{\frac{d\ln\rhoover}{dr}}
+\newcommand{\dlntmpover}{\frac{d\ln\tmpover}{dr}}
+\newcommand{\dlnprsover}{\frac{d\ln\prsover}{dr}}
+\newcommand{\dsdrover}{\frac{d\entrover}{dr}}
+\newcommand{\dsdroverline}{d\entrover/dr}
+\newcommand{\dlnrhooverline}{d\ln\rhoover/dr}
+\newcommand{\dlntmpoverline}{d\ln\tmpover/dr}
+\newcommand{\dlnprsoverline}{d\ln\prsover/dr}
+
+% reference state
+\newcommand{\rhotilde}{\tilde{\rho}}
+\newcommand{\tmptilde}{\tilde{T}}
+\newcommand{\prstilde}{\tilde{p}}
+\newcommand{\entrtilde}{\tilde{s}}
+\newcommand{\intetilde}{\tilde{u}}
+\newcommand{\enthtilde}{\tilde{h}}
+\newcommand{\heattilde}{\tilde{Q}}
+\newcommand{\heatradtilde}{\tilde{Q}_{\rm r}}
+\newcommand{\dentr}{\delta_s}
+\newcommand{\dheat}{\delta_Q}
+\newcommand{\drad}{\delta_{\rm r}}
+\newcommand{\rheat}{r_Q}
+\newcommand{\rentr}{r_s}
+\newcommand{\lumtilde}{\tilde{L}}
+\newcommand{\heatra}{\tilde{Q}_{\texttt{Ra}}}
+\newcommand{\cooltilde}{\tilde{C}}
+\newcommand{\brunttilde}{\widetilde{N}}
+\newcommand{\brunttildesq}{\widetilde{N}^2}
+\newcommand{\nsqtilde}{\widetilde{N^2}}
+\newcommand{\gtilde}{\tilde{g}}
+\newcommand{\nutilde}{\tilde{\nu}}
+\newcommand{\kappatilde}{\tilde{\kappa}}
+\newcommand{\etatilde}{\tilde{\eta}}
+\newcommand{\mutilde}{\tilde{\mu}}
+\newcommand{\deltatilde}{\tilde{\delta}}
+\newcommand{\cptilde}{\tilde{\cpcap}}
+\newcommand{\cvtilde}{\tilde{\cvcap}}
+\newcommand{\cssqtilde}{\tilde{\cs^2}}
+\newcommand{\Dentrtilde}{\Delta\entrtilde}
+\newcommand{\Dentrtildef}{(\Delta\entrtilde)_{\rm f}}
+
+\newcommand{\fluxradtilde}{\tilde{\flux}_{\rm{r}}}
+\newcommand{\fluxscalarradtilde}{\tilde{F}_{\rm{r}}}
+\newcommand{\fluxnradtilde}{\tilde{\flux}_{\rm{nr}}}
+\newcommand{\fluxscalarnradtilde}{\tilde{F}_{\rm{nr}}}
+\newcommand{\fluxcondtilde}{\tilde{\flux}_{\rm{c}}}
+\newcommand{\fluxscalarcondtilde}{\tilde{F}_{\rm{c}}}
+
+% reference-state derivatives
+\newcommand{\dlnrhotilde}{\frac{d\ln\rhotilde}{dr}}
+\newcommand{\dlntmptilde}{\frac{d\ln\tmptilde}{dr}}
+\newcommand{\dlnprstilde}{\frac{d\ln\prstilde}{dr}}
+\newcommand{\dsdrtilde}{\frac{d\entrtilde}{dr}}
+\newcommand{\dlnrhotildeline}{d\ln\rhotilde/dr}
+\newcommand{\dlntmptildeline}{d\ln\tmptilde/dr}
+\newcommand{\dlnprstildeline}{d\ln\prstilde/dr}
+\newcommand{\dsdrtildeline}{d\entrtilde/dr}
+
+% some other ancillary reference state quantities (sort of)
+\newcommand{\grav}{g}
+\newcommand{\vecg}{\bm{g}}
+\newcommand{\geff}{g_{\rm{eff}}}
+\newcommand{\vecgeff}{\bm{g}_{\rm{eff}}}
+\newcommand{\heat}{Q}
+\newcommand{\buoyfreq}{N}
+\newcommand{\brunt}{N}
+\newcommand{\nsq}{N^2}
+\newcommand{\hrho}{H_\rho}
+\newcommand{\hprs}{H_{\rm{p}}}
+\newcommand{\hrhotilde}{\widetilde{H_\rho}}
+\newcommand{\hprstilde}{\widetilde{H_{\rm p}}}
+
+% grad ad and grad rad
+\newcommand{\gradrad}{\nabla_{\rm r}}
+\newcommand{\gradad}{\nabla_{\rm ad}}
+
+% perturbations from reference state
+\newcommand{\rhoprime}{{\rho^\prime}}
+\newcommand{\tmpprime}{{T^\prime}}
+\newcommand{\prsprime}{{p^\prime}}
+\newcommand{\entrprime}{{s^\prime}}
+\newcommand{\inteprime}{{u^\prime}}
+\newcommand{\heatprime}{{Q^\prime}}
+\newcommand{\enthprime}{{h^\prime}}
+\newcommand{\fradprime}{\bm{F}^\prime_{\rm rad}}
+\newcommand{\kradprime}{\kappa^\prime_{\rm rad}}
+\newcommand{\fcondprime}{\bm{F}^\prime_{\rm cond}}
+
+% horizontally symmetric perturbations
+\newcommand{\rhohat}{\hat{\rho}}
+\newcommand{\tmphat}{\hat{T}}
+\newcommand{\prshat}{\hat{p}}
+\newcommand{\entrhat}{\hat{s}}
+\newcommand{\intehat}{\hat{u}}
+\newcommand{\enthhat}{\hat{h}}
+
+% perturbations from mean
+\newcommand{\rhoone}{\rho_1}
+\newcommand{\tmpone}{T_1}
+\newcommand{\prsone}{p_1}
+\newcommand{\entrone}{s_1}
+\newcommand{\inteone}{u_1}
+\newcommand{\enthone}{h_1}
+
+\newcommand{\pomega}{\varpi}
+
+% VECTOR FIELDS
+\newcommand{\vecu}{\bm{u}}
+\newcommand{\vecb}{\bm{B}}
+\newcommand{\vecom}{\bm{\omega}}
+\newcommand{\vecj}{\bm{\mathcal{J}}}
+
+\newcommand{\upol}{\vecu_{\rm{pol}}}
+\newcommand{\bpol}{\vecb_{\rm{pol}}}
+\newcommand{\umer}{\vecu_{\rm{m}}}
+\newcommand{\bmer}{\vecb_{\rm{m}}}
+
+\newcommand{\urad}{u_r}
+\newcommand{\utheta}{u_\theta}
+\newcommand{\uphi}{u_\phi}
+\newcommand{\ulambda}{u_\lambda}
+\newcommand{\uz}{u_z}
+
+\newcommand{\omrad}{\omega_r}
+\newcommand{\omtheta}{\omega_\theta}
+\newcommand{\omphi}{\omega_\phi}
+\newcommand{\omlambda}{\omega_\lambda}
+\newcommand{\omz}{\omega_z}
+
+\newcommand{\brad}{B_r}
+\newcommand{\btheta}{B_\theta}
+\newcommand{\bphi}{B_\phi}
+\newcommand{\blambda}{B_\lambda}
+\newcommand{\bz}{B_z}
+
+\newcommand{\jrad}{\mathcal{J}_r}
+\newcommand{\jtheta}{\mathcal{J}_\theta}
+\newcommand{\jphi}{\mathcal{J}_\phi}
+\newcommand{\jlambda}{\mathcal{J}_\lambda}
+\newcommand{\jz}{\mathcal{J}_z}
+
+% primed versions
+\newcommand{\vecuprime}{\bm{u}^\prime}
+\newcommand{\vecbprime}{\bm{B}^\prime}
+\newcommand{\vecomprime}{\bm{\omega}^\prime}
+\newcommand{\vecjprime}{\bm{\mathcal{J}}^\prime}
+
+\newcommand{\upolprime}{\vecu_{\rm{pol}}^\prime}
+\newcommand{\bpolprime}{\vecb_{\rm{pol}}^\prime}
+\newcommand{\umerprime}{\vecu_{\rm{m}}^\prime}
+\newcommand{\bmerprime}{\vecb_{\rm{m}}^\prime}
+
+\newcommand{\uradprime}{u_r^\prime}
+\newcommand{\uthetaprime}{u_\theta^\prime}
+\newcommand{\uphiprime}{u_\phi^\prime}
+\newcommand{\ulambdaprime}{u_\lambda^\prime}
+\newcommand{\uzprime}{u_z^\prime}
+
+\newcommand{\omradprime}{\omega_r^\prime}
+\newcommand{\omthetaprime}{\omega_\theta^\prime}
+\newcommand{\omphiprime}{\omega_\phi^\prime}
+\newcommand{\omlambdaprime}{\omega_\lambda^\prime}
+\newcommand{\omzprime}{\omega_z^\prime}
+
+\newcommand{\bradprime}{B_r^\prime}
+\newcommand{\bthetaprime}{B_\theta^\prime}
+\newcommand{\bphiprime}{B_\phi^\prime}
+\newcommand{\blambdaprime}{B_\lambda^\prime}
+\newcommand{\bzprime}{B_z^\prime}
+
+\newcommand{\jradprime}{\mathcal{J}_r^\prime}
+\newcommand{\jthetaprime}{\mathcal{J}_\theta^\prime}
+\newcommand{\jphiprime}{\mathcal{J}_\phi^\prime}
+\newcommand{\jlambdaprime}{\mathcal{J}_\lambda^\prime}
+\newcommand{\jzprime}{\mathcal{J}_z^\prime}
+
+% spherical coordinates
+\newcommand{\cost}{\cos\theta}
+\newcommand{\sint}{\sin\theta}
+\newcommand{\cott}{\cot\theta}
+\newcommand{\rsint}{r\sint}
+\newcommand{\orsint}{\frac{1}{\rsint}}
+\newcommand{\orsintline}{(1/\rsint)}
+\newcommand{\rt}{r\theta}
+
+% angular momentum
+\newcommand{\amom}{\mathcal{L}}
+
+
+% SIMULATION GEOMETRY
+%s subscripts
+\newcommand{\minn}{_{\rm{min}}}
+\newcommand{\maxx}{_{\rm{max}}}
+\newcommand{\inn}{_{\rm{in}}}
+\newcommand{\out}{_{\rm{out}}}
+\newcommand{\bott}{_{\rm{bot}}}
+\newcommand{\midd}{_{\rm{mid}}}
+\newcommand{\topp}{_{\rm{top}}}
+\newcommand{\bcz}{_{\rm{bcz}}}
+\newcommand{\ov}{_{\rm{ov}}}
+\newcommand{\rms}{_{\rm{rms}}}
+\newcommand{\const}{_{\rm{const}}}
+
+\newcommand{\nr}{N_r}
+\newcommand{\nt}{N_\theta}
+\newcommand{\np}{N_\phi}
+\newcommand{\nmax}{{n_{\rm{max}}}}
+\newcommand{\lmax}{{\ell_{\rm{max}}}}
+
+% SOLAR AND STELLAR VARIABLES
+\newcommand{\lsun}{L_\odot}
+
+\newcommand{\msun}{M_\odot}
+\newcommand{\rstar}{R_*}
+\newcommand{\lstar}{L_*}
+\newcommand{\mstar}{M_*}
+
+\newcommand{\rearth}{R_\oplus}
+\newcommand{\omearth}{\Omega_\oplus}
+\newcommand{\mearth}{M_\oplus}
+
+% TORQUE DEFINITIONS
+\newcommand{\taurs}{\tau_{\rm{rs}}}
+\newcommand{\taumc}{\tau_{\rm{mc}}}
+\newcommand{\tauv}{\tau_{\rm{v}}}
+\newcommand{\taurad}{\tau_{\rm{rad}}}
+\newcommand{\taums}{\tau_{\rm{ms}}}
+\newcommand{\taumm}{\tau_{\rm{mm}}}
+\newcommand{\taumag}{\tau_{\rm{mag}}}
+
+% ANGULAR MOMENTUM FLUX DEFINITIONS
+\newcommand{\aflux}{\bm{\mathcal{F}}}
+\newcommand{\afluxrs}{\aflux^{\rm{rs}}}
+\newcommand{\afluxmc}{\aflux^{\rm{mc}}}
+\newcommand{\afluxv}{\aflux^{\rm{v}}}
+\newcommand{\afluxms}{\aflux^{\rm{ms}}}
+\newcommand{\afluxmm}{\aflux^{\rm{mm}}}
+\newcommand{\afluxmag}{\aflux^{\rm{mag}}}
+
+% time-scales using tau
+\newcommand{\taunu}{\tau_{\nu}}
+\newcommand{\taukappa}{\tau_{\kappa}}
+\newcommand{\taueta}{\tau_{\eta}}
+\newcommand{\tauff}{\tau_{\rm ff}}
+\newcommand{\tauomega}{\tau_\Omega}
+\newcommand{\taun}{\tau_N}
+\newcommand{\taues}{\tau_{\rm ES}}
+
+% time-scales using P
+\newcommand{\pes}{{P_{\rm{ES}}}}
+\newcommand{\pburrow}{{P_{\rm{b}}}}
+\newcommand{\pessun}{{P_{ {\rm ES}, \odot}}}
+\newcommand{\pnu}{{P_{\nu}}}
+\newcommand{\pkappa}{{P_{\kappa}}}
+\newcommand{\peta}{{P_{\eta}}}
+\newcommand{\prot}{{P_{\rm{rot}}}}
+\newcommand{\pom}{{P_{\Omega}}}
+\newcommand{\pff}{{P_{\rm ff}}}
+\newcommand{\pequil}{{P_{\rm{eq}}}}
+\newcommand{\pcyc}{{P_{\rm{cyc}}}}
+\newcommand{\pcycm}{{P_{{\rm cyc}, m}}}
+
+% ``non-dimensional" time-scales using P_hat
+\newcommand{\pesnd}{{\hat{P}_{\rm{ES}}}}
+\newcommand{\pburrownd}{{\hat{P}_{\rm{b}}}}
+\newcommand{\pessunnd}{{\hat{P}_{ {\rm ES}, \odot}}}
+\newcommand{\pnund}{{\hat{P}_{\nu}}}
+\newcommand{\pkappand}{{\hat{P}_{\kappa}}}
+\newcommand{\petand}{{\hat{P}_{\eta}}}
+\newcommand{\protnd}{{\hat{P}_{\rm{rot}}}}
+\newcommand{\pomnd}{{\hat{P}_{\Omega}}}
+\newcommand{\pffnd}{{\hat{P}_{\rm ff}}}
+\newcommand{\pequilnd}{{\hat{P}_{\rm{eq}}}}
+\newcommand{\pcycnd}{{\hat{P}_{\rm{cyc}}}}
+\newcommand{\pcycmnd}{{\hat{P}_{{\rm cyc}, m}}}
+
+% time-scales using t
+\newcommand{\tes}{{t_{\rm{ES}}}}
+\newcommand{\tcirc}{{t_{\rm{circ}}}}
+\newcommand{\tessh}{{t_{\rm{ES,sh}}}}
+\newcommand{\tburrow}{{t_{\rm{b}}}}
+\newcommand{\tessun}{{t_{ {\rm ES}, \odot}}}
+\newcommand{\tnu}{{t_{\nu}}}
+\newcommand{\tnurz}{{t_{{\nu}\rm,RZ}}}
+\newcommand{\tkappa}{{t_{\kappa}}}
+\newcommand{\teta}{{t_{\eta}}}
+\newcommand{\trot}{{t_{\rm{rot}}}}
+\newcommand{\tom}{{t_{\Omega}}}
+\newcommand{\tff}{{t_{\rm ff}}}
+\newcommand{\tequil}{{t_{\rm{eq}}}}
+\newcommand{\tcyc}{{t_{\rm{cyc}}}}
+\newcommand{\trun}{{t_{\rm{run}}}}
+\newcommand{\tmax}{{t_{\rm{max}}}}
+\newcommand{\tcycm}{{t_{{\rm cyc}, m}}}
+
+% dimensional time-scales using t^*
+\newcommand{\tesdim}{{t_{\rm{ES}}^*}}
+\newcommand{\tcircdim}{{t_{\rm{circ}}^*}}
+\newcommand{\tesshdim}{{t_{\rm{ES,sh}}^*}}
+\newcommand{\tburrowdim}{{t_{\rm{b}}^*}}
+\newcommand{\tnudim}{{t_{\nu}^*}}
+\newcommand{\tnurzdim}{{t_{{\nu}\rm,RZ}^*}}
+\newcommand{\tkappadim}{{t_{\kappa}^*}}
+\newcommand{\tetadim}{{t_{\eta}^*}}
+\newcommand{\trotdim}{{t_{\rm{rot}^*}}}
+\newcommand{\tomdim}{{t_{\Omega}^*}}
+\newcommand{\tffdim}{{t_{\rm ff}^*}}
+\newcommand{\tequildim}{{t_{\rm{eq}^*}}}
+\newcommand{\tcycdim}{{t_{\rm{cyc}^*}}}
+\newcommand{\trundim}{{t_{\rm{run}^*}}}
+\newcommand{\tmaxdim}{{t_{\rm{max}^*}}}
+
+\newcommand{\omcyc}{{\omega_{\rm{cyc}}}}
+\newcommand{\omcycm}{{\omega_{{\rm{cyc}}, m}}}
+% NON-DIMENSIONAL NUMBERS
+
+% fluid non-d
+\newcommand{\ra}{{\rm{Ra}}}
+\newcommand{\ratwo}{{\rm{Ra_2}}}
+\newcommand{\sigmash}{{\sigma_{\rm sh}}}
+\newcommand{\sigmazero}{{\sigma_0}}
+\newcommand{\sigmazerosq}{{\sigma_0^2}}
+\newcommand{\sigmashsq}{{\sigma^2_{\rm sh}}}
+\newcommand{\sigmaloc}{{\sigma_{\rm loc}}}
+\newcommand{\sigmadyn}{{\sigma_{\rm dyn}}}
+\newcommand{\raf}{\ra_{\rm{f}}}
+\newcommand{\ramod}{\ra^*}
+\newcommand{\rafmod}{\raf^*}
+\newcommand{\pr}{{\rm{Pr}}}
+\newcommand{\prm}{{\rm{Pr_m}}}
+\newcommand{\ek}{{\rm{Ek}}}
+\newcommand{\ta}{{\rm{Ta}}}
+\newcommand{\roc}{{\rm{Ro_c}}}
+\newcommand{\rocsq}{{\rm{Ro_c^2}}}
+\newcommand{\bu}{{\rm{Bu}}}
+\newcommand{\bumod}{{\rm{Bu^*}}}
+\newcommand{\buvisc}{{\rm{Bu_{visc}}}}
+\newcommand{\burot}{{\rm{Bu_{rot}}}}
+\newcommand{\fr}{{\rm Fr}}
+
+% ref non-d
+\newcommand{\nrho}{N_\rho}
+\newcommand{\di}{{\rm{Di}}}
+
+%\newcommand{\he}{{\rm{He}}}
+
+% output non-d
+\newcommand{\ro}{{\rm{Ro}}}
+\newcommand{\lo}{{\rm{Lo}}}
+
+\newcommand{\re}{{\rm{Re}}}
+\newcommand{\rem}{{\rm{Re_m}}}
+
+% UNITS
+\newcommand{\gram}{{\rm{g}}}
+\newcommand{\cm}{{\rm{cm}}}
+\newcommand{\second}{{\rm{s}}}
+\newcommand{\yr}{{\rm{yr}}}
+\newcommand{\gauss}{{\rm{G}}}
+\newcommand{\kelv}{{\rm{K}}}
+\newcommand{\unitentr}{{\rm{erg\ g^{-1}\ K^{-1}}}}
+\newcommand{\unitdsdr}{{\rm{erg\ g^{-1}\ K^{-1}\ cm^{-1}}}}
+\newcommand{\uniten}{\rm{erg}\ \cm^{-3}}
+\newcommand{\unitprs}{\rm{dyn}\ \cm^{-2}}
+\newcommand{\unitrho}{\gram\ \cm^{-3}}
+\newcommand{\stoke}{\rm{cm^2\ s^{-1}}}
+
+% MEAN FIELD THEORY
+\newcommand{\meanb}{\overline{\bm{B}}}
+\newcommand{\flucb}{\bm{B}^\prime}
+\newcommand{\totb}{\bm{B}}
+
+\newcommand{\meanv}{\overline{\bm{v}}}
+\newcommand{\flucv}{\bm{v}^\prime}
+\newcommand{\totv}{\bm{v}}
+
+\newcommand{\emf}{\bm{\mathcal{E}}}
+\newcommand{\meanemf}{\overline{\bm{\mathcal{E}}}}
+\newcommand{\meanbpol}{\overline{\bm{B}_{\rm{pol}}}}
+
+% key radii
+
+% simulation boundaries
+\newcommand{\rin}{r_{\rm i}}
+\newcommand{\rout}{r_{\rm o}}
+\newcommand{\rbot}{r_{\rm b}}
+\newcommand{\rtop}{r_{\rm t}}
+
+% physical boundaries
+\newcommand{\rbcz}{r_{\rm bcz}}
+\newcommand{\rtcz}{r_{\rm tcz}}
+\newcommand{\rbrz}{r_{\rm brz}}
+\newcommand{\rtrz}{r_{\rm trz}}
+\newcommand{\rc}{r_{\rm c}}
+\newcommand{\rcz}{r_{\rm cz}}
+\newcommand{\rnrhothree}{r_{3}}
+\newcommand{\rtach}{r_{\rm t}}
+\newcommand{\dtach}{\delta_{\rm t}}
+
+% solar radii
+\newcommand{\rsun}{R_\odot}
+\newcommand{\rczsun}{R_{\rm cz}}
+\newcommand{\rnrhothreesun}{R_{\rm 3}}
+\newcommand{\rtachsun}{R_{\rm t}}
+\newcommand{\dtachsun}{\Delta_{\rm t}}
+
+% SIMULATION CODES
+\newcommand{\rayleigh}{\texttt{Rayleigh}}
+\newcommand{\rayleigha}{\texttt{Rayleigh 0.9.1}}
+\newcommand{\rayleighb}{\texttt{Rayleigh 1.0.1}}
+
+\newcommand{\eulag}{\texttt{EULAG}}
+\newcommand{\eulagmhd}{\texttt{EULAG-MHD}}
+\newcommand{\ash}{\texttt{ASH}}
+\newcommand{\rsst}{\texttt{RSST}}
+\newcommand{\rtdt}{\texttt{R2D2}}
+\newcommand{\pencil}{\texttt{Pencil}}
