@@ -102,6 +102,7 @@
 \newcommand{\twoomzero}{2\Omega_0}
 \newcommand{\omzerovec}{\bm{\Omega}_0}
 \newcommand{\omsun}{\Omega_\odot}
+\newcommand{\bruntsun}{N_\odot}
 \newcommand{\domega}{\Delta\Omega}
 \newcommand{\domsixty}{\domega_{\rm 60}}
 
@@ -173,8 +174,13 @@
 \newcommand{\nsqa}{N^2_a}
 \newcommand{\grava}{g_a}
 \newcommand{\nua}{\nu_a}
+\newcommand{\nut}{\nu_{\rm t}}
+\newcommand{\nurz}{\nu_{\rm RZ}}
 \newcommand{\kappaa}{\kappa_a}
+\newcommand{\kappat}{\kappa_{\rm t}}
+\newcommand{\kapparz}{\kappa_{\rm RZ}}
 \newcommand{\etaa}{\eta_a}
+\newcommand{\etarz}{\eta_{\rm RZ}}
 \newcommand{\mua}{\mu_a}
 \newcommand{\deltaa}{\delta_a}
 \newcommand{\cpa}{(\cpcap)_a}
@@ -464,39 +470,51 @@
 
 % time-scales using t
 \newcommand{\tes}{{t_{\rm{ES}}}}
+\newcommand{\test}{{t_{\rm{ES,t}}}}
 \newcommand{\tcirc}{{t_{\rm{circ}}}}
-\newcommand{\tessh}{{t_{\rm{ES,sh}}}}
 \newcommand{\tburrow}{{t_{\rm{b}}}}
 \newcommand{\tessun}{{t_{ {\rm ES}, \odot}}}
 \newcommand{\tnu}{{t_{\nu}}}
-\newcommand{\tnurz}{{t_{{\nu}\rm,RZ}}}
+\newcommand{\tnut}{{t_{{\nu}\rm,t}}}
 \newcommand{\tkappa}{{t_{\kappa}}}
 \newcommand{\teta}{{t_{\eta}}}
 \newcommand{\trot}{{t_{\rm{rot}}}}
-\newcommand{\tom}{{t_{\Omega}}}
+\newcommand{\tomega}{{t_{\Omega}}}
+\newcommand{\tbrunt}{t_N}
+\newcommand{\tvs}{{t_{\rm vs}}}
+\newcommand{\trs}{{t_{\rm rs}}}
+
+
 \newcommand{\tff}{{t_{\rm ff}}}
 \newcommand{\tequil}{{t_{\rm{eq}}}}
 \newcommand{\tcyc}{{t_{\rm{cyc}}}}
 \newcommand{\trun}{{t_{\rm{run}}}}
 \newcommand{\tmax}{{t_{\rm{max}}}}
 \newcommand{\tcycm}{{t_{{\rm cyc}, m}}}
+\newcommand{\tsun}{t_\odot}
 
 % dimensional time-scales using t^*
 \newcommand{\tesdim}{{t_{\rm{ES}}^*}}
+\newcommand{\testdim}{{t_{\rm{ES,t}}^*}}
 \newcommand{\tcircdim}{{t_{\rm{circ}}^*}}
 \newcommand{\tesshdim}{{t_{\rm{ES,sh}}^*}}
 \newcommand{\tburrowdim}{{t_{\rm{b}}^*}}
 \newcommand{\tnudim}{{t_{\nu}^*}}
-\newcommand{\tnurzdim}{{t_{{\nu}\rm,RZ}^*}}
+\newcommand{\tnutdim}{{t_{{\nu}\rm,t}^*}}
 \newcommand{\tkappadim}{{t_{\kappa}^*}}
 \newcommand{\tetadim}{{t_{\eta}^*}}
-\newcommand{\trotdim}{{t_{\rm{rot}^*}}}
-\newcommand{\tomdim}{{t_{\Omega}^*}}
+\newcommand{\trotdim}{{t_{\rm{rot}}^*}}
+\newcommand{\tomegadim}{{t_{\Omega}^*}}
+\newcommand{\tbruntdim}{{t_N^*}}
+
 \newcommand{\tffdim}{{t_{\rm ff}^*}}
-\newcommand{\tequildim}{{t_{\rm{eq}^*}}}
-\newcommand{\tcycdim}{{t_{\rm{cyc}^*}}}
-\newcommand{\trundim}{{t_{\rm{run}^*}}}
-\newcommand{\tmaxdim}{{t_{\rm{max}^*}}}
+\newcommand{\tequildim}{{t_{\rm{eq}}^*}}
+\newcommand{\tcycdim}{{t_{\rm{cyc}}^*}}
+\newcommand{\trundim}{{t_{\rm{run}}^*}}
+\newcommand{\tmaxdim}{{t_{\rm{max}}^*}}
+\newcommand{\tsundim}{t_{\odot}^*}
+\newcommand{\tvsdim}{t_{\rm vs}^*}
+\newcommand{\trsdim}{t_{\rm rs}^*}
 
 \newcommand{\omcyc}{{\omega_{\rm{cyc}}}}
 \newcommand{\omcycm}{{\omega_{{\rm{cyc}}, m}}}
@@ -505,7 +523,7 @@
 % fluid non-d
 \newcommand{\ra}{{\rm{Ra}}}
 \newcommand{\ratwo}{{\rm{Ra_2}}}
-\newcommand{\sigmash}{{\sigma_{\rm sh}}}
+\newcommand{\sigmaeff}{{\sigma_{\rm eff}}}
 \newcommand{\sigmazero}{{\sigma_0}}
 \newcommand{\sigmazerosq}{{\sigma_0^2}}
 \newcommand{\sigmashsq}{{\sigma^2_{\rm sh}}}
@@ -574,6 +592,11 @@
 \newcommand{\rbot}{r_{\rm b}}
 \newcommand{\rtop}{r_{\rm t}}
 
+\newcommand{\rindim}{r_{\rm i}^*}
+\newcommand{\routdim}{r_{\rm o}^*}
+\newcommand{\rbotdim}{r_{\rm b}^*}
+\newcommand{\rtopdim}{r_{\rm t}^*}
+
 % physical boundaries
 \newcommand{\rbcz}{r_{\rm bcz}}
 \newcommand{\rtcz}{r_{\rm tcz}}
@@ -583,14 +606,23 @@
 \newcommand{\rcz}{r_{\rm cz}}
 \newcommand{\rnrhothree}{r_{3}}
 \newcommand{\rtach}{r_{\rm t}}
-\newcommand{\dtach}{\delta_{\rm t}}
+\newcommand{\dtach}{\Delta_{\rm t}}
+
+\newcommand{\rbczdim}{{r_{\rm bcz}^*}}
+\newcommand{\rtczdim}{{r_{\rm tcz}^*}}
+\newcommand{\rbrzdim}{{r_{\rm brz}^*}}
+\newcommand{\rtrzdim}{{r_{\rm trz}^*}}
+\newcommand{\rcdim}{{r_{\rm c}^*}}
+\newcommand{\rczdim}{{r_{\rm cz}^*}}
+\newcommand{\rnrhothreedim}{{r_{3}^*}}
+\newcommand{\rtachdim}{{r_{\rm t}^*}}
+\newcommand{\dtachdim}{{\Delta_{\rm t}^*}}
 
 % solar radii
 \newcommand{\rsun}{R_\odot}
 \newcommand{\rczsun}{R_{\rm cz}}
 \newcommand{\rnrhothreesun}{R_{\rm 3}}
 \newcommand{\rtachsun}{R_{\rm t}}
-\newcommand{\dtachsun}{\Delta_{\rm t}}
 
 % SIMULATION CODES
 \newcommand{\rayleigh}{\texttt{Rayleigh}}
