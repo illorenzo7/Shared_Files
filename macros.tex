@@ -11,8 +11,8 @@
 \newcommand{\sncomp}[2]{{#1}e{#2}}
 
 % COMMON SUBSCRIPTS
-\newcommand{\cz}{_{\rm{CZ}}}
-\newcommand{\rz}{_{\rm{RZ}}}
+\newcommand{\cz}{_{\rm{cz}}}
+\newcommand{\rz}{_{\rm{rz}}}
 \newcommand{\fulll}{_{\rm{full}}}
 \newcommand{\dimm}{_{\rm{dim}}}
 \newcommand{\rad}{_{\rm{r}}}
@@ -39,8 +39,8 @@
 \newcommand{\avcz}[1]{\left\langle#1\right\rangle\cz}
 \newcommand{\avrz}[1]{\left\langle#1\right\rangle\rz}
 \newcommand{\avfull}[1]{\left\langle#1\right\rangle\fulll}
-\newcommand{\avczt}[1]{\left\langle#1\right\rangle_{{\rm CZ}, t}}
-\newcommand{\avrzt}[1]{\left\langle#1\right\rangle{{\rm RZ}, t}}
+\newcommand{\avczt}[1]{\left\langle#1\right\rangle_{{\rm cz}, t}}
+\newcommand{\avrzt}[1]{\left\langle#1\right\rangle{{\rm rz}, t}}
 \newcommand{\avfullt}[1]{\left\langle#1\right\rangle{{\rm full}, t}}
 
 % alternative average notation
@@ -131,6 +131,9 @@
 \newcommand{\dsdrtot}{\frac{dS\tot}{dr}}
 \newcommand{\dsdrtotline}{dS\tot/dr}
 
+% Delta S
+\newcommand{\Dentr}{\Delta s}
+
 % mean state
 \newcommand{\rhoover}{\overline{\rho}}
 \newcommand{\tmpover}{\overline{T}}
@@ -163,8 +166,14 @@
 % ``typical" values of mean state (a subscript)
 % mean state
 \newcommand{\rhoa}{\rho_a}
+\newcommand{\rhocz}{\rho\cz}
+\newcommand{\rhorz}{\rho\rz}
 \newcommand{\tmpa}{T_a}
+\newcommand{\tmpcz}{T\cz}
+\newcommand{\tmprz}{T\rz}
 \newcommand{\prsa}{p_a}
+\newcommand{\prscz}{p\cz}
+\newcommand{\prsrz}{p\rz}
 \newcommand{\entra}{s_a}
 \newcommand{\intea}{u_a}
 \newcommand{\entha}{h_a}
@@ -172,15 +181,23 @@
 \newcommand{\heatrada}{\overline{Q}_{{\rm r}a}}
 \newcommand{\coola}{C_a}
 \newcommand{\nsqa}{N^2_a}
+\newcommand{\nsqrz}{N^2\rz}
+\newcommand{\bruntrz}{N\rz}
 \newcommand{\grava}{g_a}
+\newcommand{\gravcz}{g\cz}
+\newcommand{\gravrz}{g\rz}
 \newcommand{\nua}{\nu_a}
 \newcommand{\nut}{\nu_{\rm t}}
-\newcommand{\nurz}{\nu_{\rm RZ}}
+\newcommand{\nurz}{\nu\rz}
+\newcommand{\nucz}{\nu\cz}
 \newcommand{\kappaa}{\kappa_a}
 \newcommand{\kappat}{\kappa_{\rm t}}
-\newcommand{\kapparz}{\kappa_{\rm RZ}}
+\newcommand{\kapparz}{\kappa\rz}
+\newcommand{\kappacz}{\kappa\cz}
+
 \newcommand{\etaa}{\eta_a}
-\newcommand{\etarz}{\eta_{\rm RZ}}
+\newcommand{\etarz}{\eta\rz}
+\newcommand{\etacz}{\eta\cz}
 \newcommand{\mua}{\mu_a}
 \newcommand{\deltaa}{\delta_a}
 \newcommand{\cpa}{(\cpcap)_a}
@@ -188,6 +205,7 @@
 \newcommand{\cssqa}{(\cs^2)_a}
 \newcommand{\fluxrada}{F_{{\rm r}a}}
 \newcommand{\fluxnrada}{F_{{\rm{nr}}a}}
+\newcommand{\fluxnradcz}{F_{{\rm{nr,cz}}}}
 \newcommand{\krada}{\kappa_{{\rm rad}a}}
 \newcommand{\sigmaa}{\sigma_a}
 
@@ -315,6 +333,12 @@
 \newcommand{\ulambda}{u_\lambda}
 \newcommand{\uz}{u_z}
 
+\newcommand{\rhoumer}{\av{\rhotilde\umer}}
+\newcommand{\rhourad}{\av{\rhotilde\urad}}
+\newcommand{\rhoutheta}{\av{\rhotilde\utheta}}
+\newcommand{\rhoulambda}{\av{\rhotilde\ulambda}}
+\newcommand{\rhouz}{\av{\rhotilde\uz}}
+
 \newcommand{\omrad}{\omega_r}
 \newcommand{\omtheta}{\omega_\theta}
 \newcommand{\omphi}{\omega_\phi}
@@ -349,6 +373,13 @@
 \newcommand{\uphiprime}{u_\phi^\prime}
 \newcommand{\ulambdaprime}{u_\lambda^\prime}
 \newcommand{\uzprime}{u_z^\prime}
+
+\newcommand{\avurad}{\av{u_r}}
+\newcommand{\avutheta}{\av{u_\theta}}
+\newcommand{\avuphi}{\av{u_\phi}}
+\newcommand{\avulambda}{\av{u_\lambda}}
+\newcommand{\avuz}{\av{u_z}}
+\newcommand{\aventrhat}{\av{\entrhat}}
 
 \newcommand{\omradprime}{\omega_r^\prime}
 \newcommand{\omthetaprime}{\omega_\theta^\prime}
@@ -469,11 +500,11 @@
 \newcommand{\pcycmnd}{{\hat{P}_{{\rm cyc}, m}}}
 
 % time-scales using t
-\newcommand{\tes}{{t_{\rm{ES}}}}
-\newcommand{\test}{{t_{\rm{ES,t}}}}
+\newcommand{\tes}{{t_{\rm{es}}}}
+\newcommand{\test}{{t_{\rm{es,t}}}}
 \newcommand{\tcirc}{{t_{\rm{circ}}}}
 \newcommand{\tburrow}{{t_{\rm{b}}}}
-\newcommand{\tessun}{{t_{ {\rm ES}, \odot}}}
+\newcommand{\tessun}{{t_{ {\rm es}, \odot}}}
 \newcommand{\tnu}{{t_{\nu}}}
 \newcommand{\tnut}{{t_{{\nu}\rm,t}}}
 \newcommand{\tkappa}{{t_{\kappa}}}
@@ -494,10 +525,10 @@
 \newcommand{\tsun}{t_\odot}
 
 % dimensional time-scales using t^*
-\newcommand{\tesdim}{{t_{\rm{ES}}^*}}
-\newcommand{\testdim}{{t_{\rm{ES,t}}^*}}
+\newcommand{\tesdim}{{t_{\rm{es}}^*}}
+\newcommand{\testdim}{{t_{\rm{es,t}}^*}}
 \newcommand{\tcircdim}{{t_{\rm{circ}}^*}}
-\newcommand{\tesshdim}{{t_{\rm{ES,sh}}^*}}
+\newcommand{\tesshdim}{{t_{\rm{es,sh}}^*}}
 \newcommand{\tburrowdim}{{t_{\rm{b}}^*}}
 \newcommand{\tnudim}{{t_{\nu}^*}}
 \newcommand{\tnutdim}{{t_{{\nu}\rm,t}^*}}
@@ -524,17 +555,21 @@
 \newcommand{\ra}{{\rm{Ra}}}
 \newcommand{\ratwo}{{\rm{Ra_2}}}
 \newcommand{\sigmaeff}{{\sigma_{\rm eff}}}
+\newcommand{\sigmaest}{{\sigma_{\rm est}}}
+\newcommand{\sigmaeffloc}{{\sigma_{\rm eff,loc}}}
 \newcommand{\sigmazero}{{\sigma_0}}
 \newcommand{\sigmazerosq}{{\sigma_0^2}}
 \newcommand{\sigmashsq}{{\sigma^2_{\rm sh}}}
 \newcommand{\sigmaloc}{{\sigma_{\rm loc}}}
 \newcommand{\sigmadyn}{{\sigma_{\rm dyn}}}
 \newcommand{\raf}{\ra_{\rm{f}}}
+\newcommand{\rafloc}{\ra_{\rm{f,loc}}}
 \newcommand{\ramod}{\ra^*}
 \newcommand{\rafmod}{\raf^*}
 \newcommand{\pr}{{\rm{Pr}}}
 \newcommand{\prm}{{\rm{Pr_m}}}
 \newcommand{\ek}{{\rm{Ek}}}
+\newcommand{\ekt}{{\rm{Ek_T}}}
 \newcommand{\ta}{{\rm{Ta}}}
 \newcommand{\roc}{{\rm{Ro_c}}}
 \newcommand{\rocsq}{{\rm{Ro_c^2}}}
@@ -545,7 +580,8 @@
 \newcommand{\fr}{{\rm Fr}}
 
 % ref non-d
-\newcommand{\nrho}{N_\rho}
+\newcommand{\Nrho}{N_\rho}
+\newcommand{\nrho}{n_\rho}
 \newcommand{\di}{{\rm{Di}}}
 
 %\newcommand{\he}{{\rm{He}}}
@@ -603,24 +639,23 @@
 \newcommand{\rbrz}{r_{\rm brz}}
 \newcommand{\rtrz}{r_{\rm trz}}
 \newcommand{\rc}{r_{\rm c}}
-\newcommand{\rcz}{r_{\rm cz}}
 \newcommand{\rnrhothree}{r_{3}}
 \newcommand{\rtach}{r_{\rm t}}
 \newcommand{\dtach}{\Delta_{\rm t}}
+\newcommand{\dtachsun}{\Delta_\odot}
 
 \newcommand{\rbczdim}{{r_{\rm bcz}^*}}
 \newcommand{\rtczdim}{{r_{\rm tcz}^*}}
 \newcommand{\rbrzdim}{{r_{\rm brz}^*}}
 \newcommand{\rtrzdim}{{r_{\rm trz}^*}}
 \newcommand{\rcdim}{{r_{\rm c}^*}}
-\newcommand{\rczdim}{{r_{\rm cz}^*}}
 \newcommand{\rnrhothreedim}{{r_{3}^*}}
 \newcommand{\rtachdim}{{r_{\rm t}^*}}
 \newcommand{\dtachdim}{{\Delta_{\rm t}^*}}
 
 % solar radii
 \newcommand{\rsun}{R_\odot}
-\newcommand{\rczsun}{R_{\rm cz}}
+\newcommand{\rbczsun}{R_{\rm bcz}}
 \newcommand{\rnrhothreesun}{R_{\rm 3}}
 \newcommand{\rtachsun}{R_{\rm t}}
 
